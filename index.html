@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elisangela Rocha Leal</title>
+
+<!--  folha de estilos passada pelo head -->
+    <style>
+        * {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+/* Variáveis com atribuição de cores, mais fácil para manutenção */
+        :root {
+            --roxo: #6A5ACD;
+            --azul_fraco: #87CEFA;
+            --rosa_tom1: #DDA0DD;
+            --rosa_tom2: #EE82EE;
+            --rosa_tom3: #FF00FF;
+            --rosa_tom4: #EE82EE;
+            --lavendeblush: #FFF0F5;
+            --snow: #FFFAFA;
+            --indigo: #4B0082;
+            --blue: #0000FF;
+            --white: #fff;
+            --MediumPurple: #9370DB;
+            --PowderBlue: #B0E0E6;
+            --black: #363636;
+        }
+
+        body {
+            background-color: var(--rosa_tom1);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.3rem;
+            color: var(--roxo);
+            background-color: var(--rosa_tom1);
+            margin-top: 10px;
+        }
+
+        #meu_nome {
+            font-size: 1.8rem;
+            color: var(--MediumPurple);
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 1.5rem;
+            color: var(--363636);
+            padding-top: 40px;
+        }
+
+        nav {
+            margin-top: 5px;
+            padding: 10px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        nav,
+        li,
+        a {
+            cursor: pointer;
+            margin-top: 8px;
+            font-size: 1rem;
+            color: var(--rosa_tom3);
+        }
+
+
+
+        .menu {
+            width: 140px;
+            padding: 5px;
+            background-color: var(--PowderBlue);
+            border-radius: 10px;
+            border: 2px solid var(--white);
+        }
+
+        .menu:hover {
+            background-color: var(--white);
+        }
+
+        .container_sobre {
+            position: relative;
+            display: flex;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 30px;
+            width: 100%;
+            height: 400px;
+            margin-bottom: 30px;
+        }
+
+        .sobre {
+            position: absolute;
+            left: 200px;
+            width: 50%;
+            height: 100%;
+            margin-left: 5%;
+            text-align: left;
+            margin-top: 40px;
+        }
+
+        #titulo_sobre {
+            text-align: center;
+            font-size: 1.7rem;
+            color: var(--white);
+        }
+
+        .sobre,
+        p {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            color: var(--black);
+            line-height: normal;
+        }
+
+        .foto_sobre {
+            position: absolute;
+            left: 10px;
+            background-color: var(--white);
+            /*border-radius: 15px;*/
+            border: 3px solid var(--PowderBlue);
+            width: 150px;
+            height: 198px;
+            /*padding: 10px;*/
+            margin-left: 10px;
+            margin-top: 35px;
+        }
+
+        .container_formacao {
+            position: relative;
+            display: flex;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 30px;
+            width: 100%;
+            height: 400px;
+            margin-bottom: 30px;
+        }
+
+        .formacao {
+            position: absolute;
+            right: 200px;
+            width: 50%;
+            height: 100%;
+            margin-right: 5%;
+            text-align: right;
+            margin-top: 40px;
+        }
+
+        #titulo_formacao {
+            text-align: center;
+            font-size: 1.7rem;
+            color: var(--white);
+        }
+
+        .formacao,
+        p {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            color: var(--black);
+        }
+
+        .container_portifolio {
+            position: relative;
+            display: flex;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 30px;
+            width: 100%;
+            height: 400px;
+            margin-bottom: 30px;
+        }
+
+        .portifolio {
+            position: absolute;
+            left: 200px;
+            width: 50%;
+            height: 100%;
+            margin-left: 5%;
+            text-align: left;
+            margin-top: 40px;
+        }
+
+        .portifolio , a {
+            color: var(--blue);
+        }
+ 
+        #titulo_portifolio {
+            text-align: center;
+            font-size: 1.7rem;
+            color: var(--white);
+        }
+
+        .portifolio,
+        p {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            color: var(--black);
+        }
+
+        .link_portifolio > a {
+            margin-top: 10px;
+            font-size: 1rem;
+            color: var(--blue);
+        }
+
+        .container_contato {
+            position: relative;
+            width: 100%;
+            margin-top: 50px;
+            height: 500px;
+            background-color: var(--indigo);
+            color: var(--white);
+        }
+
+        .formulario_contato {
+            position: obsolute;
+            padding: 15px;
+            margin-top: 5px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 55%;
+            font-size: 2rem;
+            height: 73%;
+            background-color: var(--white);
+        }
+
+        .centraliza_form_contato {
+            margin-left: auto;
+            margin-right: auto;
+            padding: 10px;
+            margin-top: 0px;
+            width: 400px;
+            height: 250px;
+        }
+
+        #hr_formulario_externo {
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #hr_formulario_interno {
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #paragrafo_nome {
+            margin-left: 0px;
+            font-size: 1rem;
+        }
+
+        #paragrafo_email {
+            margin-left: 0px;
+            ;
+            font-size: 1rem;
+        }
+
+        #paragrafo_mensagem {
+            margin-left: 0px;
+            font-size: 1rem;
+        }
+
+        #paragrafo_resposta_contato {
+            text-align: center;
+            font-size: 1rem;
+            margin-top: 3%;
+        }
+
+        .inputs {
+            width: 100%;
+        }
+
+        .input_mensagem {
+            width: 100%;
+            height: 50px;
+        }
+
+        .botao_contato {
+            position: absolute;
+            margin-right: 5px;
+            margin-top: 5px;
+        }
+
+        .footer {
+            background-color: var(--roxo);
+            text-align: center;
+            margin-top: 0px;
+            padding: 20px;
+        }
+
+        .rodape {
+            font-size: 0.8rem;
+            color: var(--white);
+        }
+    </style>
+</head>
+<!-- Corpo do site, início da construção visual ao usuário -->
+<body>
+
+    <div>
+        <h1> Olá, Sejam todos bem-vindos<p id="meu_nome">Elisangela Rocha Leal</p>
+        </h1>
+    </div>
+
+    <br>
+    <hr>
+
+    <section>
+
+        <!--Menu-->
+        <nav>
+            <ul>
+                <li class="menu">
+                    <a href="#linksobre"><b>- Sobre mim -</b></a>
+                </li>
+                <li class="menu">
+                    <a href="#linkformacao"><b>- Formação -</b></a>
+                </li>
+                <li class="menu">
+                    <a href="#linkportifolio"><b>- Meu Portifólio -</b></a>
+                </li>
+                <li class="menu">
+                    <a href="#linkcontato"><b>- Contato -</b></a>
+                </li>
+            </ul>
+        </nav>
+
+        <!--Sobre-->
+        <div class="container_sobre">
+
+            <div class="foto_sobre">
+                <img src="img/eu.jpg" alt="minha foto" width="100%">
+            </div>
+
+            <div id="linksobre" class="sobre">
+                <p id="titulo_sobre"><b>Um pouco sobre mim</b></p>
+                <hr>
+                <br>
+                <p>Olá, meu nome é Elisangela Rocha Leal, nasci no dia 07/12/1995 (28 anos) na cidade de
+                    Cantagalo/PR.Vim morar em Foz do Iguaçu
+                    com menos de um ano de idade e estou em Foz até hoje.
+                </p>
+                <p>Atualmente eu trabalho em uma fármacia como Op.Financeiro e estou cursando ADS pela Uninter.</p>
+                <p>Estou em um relacionamento a oito anos e moramos junto a seis anos.</p>
+                <p>Meus hobbies são: games,músicas, assistir dorama, animes e filmes.</p>
+            </div>
+        </div>
+
+        <br>
+
+        <!--Formacao-->
+        <div class="container_formacao">
+            <div id="linkformacao" class="formacao">
+                <p id="titulo_formacao"><b>Cursos e formações</b></p>
+                <hr>
+                <br>
+                <p>Ensino Médio (Completo)</p>
+                <p>Ensino Superior em Analise e Desenvolvimento de Sistemas (cursando)</p>
+                <p>Inglês (cursando)</p>
+            </div>
+        </div>
+
+        <!--Portifólio-->
+        <div class="container_portifolio">
+            <div  id="linkportifolio" class="portifolio">
+                <p id="titulo_portifolio"><b>Meu Portifólio</b></p>
+                <hr>
+                <br>
+                <p>Meu primeiro projeto - <a href="cidade.html">Cidade</a>
+                </p>
+                <p>Perfil no Github - <a href="https://github.com/Elisangela1995" target="_blank">Github</a>
+                </p>
+                <p>Perfil no X - <a href="https://x.com/elisarocha95" target="_blank">X</a>
+                </p>
+                <p>Perfil no Instagram - <a href="https://www.instagram.com/elisarochaleal/" target="_blank">Instagram</a>
+                </p>
+            </div>
+        </div>
+
+        <!--Contato-->
+        <div class="container_contato">
+            <h2> Formulário de contato</h2>
+            <hr id="hr_formulario_externo">
+
+            <div class="formulario_contato">
+
+                <div class="centraliza_form_contato">
+                    <form method="post">
+                        <p id="paragrafo_nome">Nome</p>
+                        <input class="inputs" type="text" name="nome" placeholder="Digite seu nome">
+                        <p id="paragrafo_email">E-mail</p>
+                        <input class="inputs" type="email" name="email" placeholder="Seu melhor e-mail">
+                        <br>
+                        <p id="paragrafo_mensagem">Deixe sua mensagem </p>
+                        <textarea class="input_mensagem" cols="55" rows="4"></textarea>
+                        <br>
+                        <input class="botao_contato" type="submit" name="enviar" value="Enviar">
+                    </form>
+                </div>
+
+                <p id="paragrafo_resposta_contato">responderei o mais breve possível, obrigado pelo seu contato.</p>
+
+                <hr id="hr_formulario_interno">
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+</body>
+
+<!--Rodapé -->
+<footer id="linkcontato" class="footer">
+    <p class="rodape"> Projeto do Curso de ADS - Uninter / Foz </p>
+    <p class="rodape"> &copy; Desenvolvido por Elisangela Rocha Leal</p>
+</footer>
+
+</html>
